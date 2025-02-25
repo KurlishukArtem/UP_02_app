@@ -25,6 +25,16 @@ namespace t_project.Elements
         {
             InitializeComponent();
             _equipment = equipment;
+            this.euip_id.Content = _equipment.Id;
+            this.tb_invent.Content = _equipment.Type_equip;
+            this.tb_class_id.Content = _equipment.Class_id;
+            this.tb_user.Content = _equipment.Prem_user_id;
+            this.tb_t_user.Content = _equipment.t_Prem_user_id;
+            this.tb_cost.Content = _equipment.cost_eqip_id;
+            this.tb_status.Content = _equipment.Status_id;
+            this.tb_model.Content = _equipment.Model_id;
+            this.tb_comment.Content = _equipment.Comment;
         }
+
     }
 }

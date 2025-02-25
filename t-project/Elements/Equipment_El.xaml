@@ -6,16 +6,26 @@
              xmlns:local="clr-namespace:t_project.Elements"
              mc:Ignorable="d" >
     <Grid>
-        <Border Background="White" 
-            BorderBrush="Black" 
-            BorderThickness="2" 
+        <Border
+            BorderBrush="DarkGray" 
+            BorderThickness="1" 
             CornerRadius="10" 
-            Padding="10">
+            Padding="10" Margin="30,10,30,0">
+            <Border.Background>
+                <ImageBrush ImageSource="C:\Users\student-a502\Desktop\t-project\t-project\t-project\Images\background.png"/>
+            </Border.Background>
             <StackPanel>
-                <TextBlock Text="Введите текст:" FontWeight="Bold" Margin="0,0,0,5"/>
-                <TextBox Width="200" Margin="0,0,0,5"/>
-                <TextBox Width="200" Margin="0,0,0,5"/>
-                <TextBox Width="200"/>
+                <Label Content="Индекс: " x:Name="euip_id" FontWeight="Bold" Margin="0,0,0,5"/>
+                <Label Content="Тип оборудования: " Width="200" Margin="0,0,0,5" Name="tb_type"/>
+                <Label Content="Фото: " Width="200" Margin="0,0,0,5" Name="tb_photo"/>
+                <Label Content="номер: " Width="200" Name="tb_invent"/>
+                <Label Content="индекс класса: " Width="200" Name="tb_class_id"/>
+                <Label Content="главный пользователь: " Width="200" Name="tb_user"/>
+                <Label Content="временный пользователь: " Width="200" Name="tb_t_user"/>
+                <Label Content="цена вопроса: " Width="200" Name="tb_cost"/>
+                <Label Content="статус: " Width="200" Name="tb_status"/>
+                <Label Content="модель: " Width="200" Name="tb_model"/>
+                <Label Content="комментарий: " Width="200" Name="tb_comment"/>
             </StackPanel>
         </Border>
        

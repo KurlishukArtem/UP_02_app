@@ -27,7 +27,7 @@ namespace t_project.Views
         public void LoadItem()
         {
             parent.Children.Clear();
-            foreach (Models.Equipment _equip in _equipContext.Equipment)
+            foreach (Models.Equipment _equip in _equipContext.equipment)
             {
                 parent.Children.Add(new Elements.Equipment_El(_equip));
             }

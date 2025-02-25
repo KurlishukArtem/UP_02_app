@@ -12,12 +12,12 @@ namespace t_project.DB.Context
 
     public class EquipContext : DbContext
     {
-        public DbSet<Equipment> Equipment {  get; set; }
+        public DbSet<Equipment> equipment {  get; set; }
         //public DbSet<Users> Users { get; set; }
         public EquipContext()
         {
             Database.EnsureCreated();
-            Equipment.Load();
+            
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
