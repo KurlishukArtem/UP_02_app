@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:t_project.Views"
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
-        WindowStyle="None"
+        WindowStyle="None" 
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
@@ -50,10 +50,12 @@
 
                     <Button.Style>
                         <Style TargetType="Button">
-                            <Setter Property="Background" Value="#0060AC"/>
+                            <Setter Property="Background" Value="#0060AC
+"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#0060AC"/>
+                                    <Setter Property="Background" Value="#0060AC
+"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
