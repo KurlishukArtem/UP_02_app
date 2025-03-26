@@ -12,7 +12,7 @@
             CornerRadius="10" 
             Padding="10" Margin="30,10,30,0">
             <Border.Background>
-                <ImageBrush ImageSource="C:\Users\student-a502\Desktop\t-project\t-project\t-project\Images\background.png"/>
+                <SolidColorBrush Color="White"/>
             </Border.Background>
             <StackPanel>
                 <Label Content="Индекс: " x:Name="euip_id" FontWeight="Bold" Margin="0,0,0,5"/>

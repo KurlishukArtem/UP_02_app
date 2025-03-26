@@ -11,7 +11,7 @@ namespace t_project.Models
     {
         public int Id { get; set; }
         public string Type_equip { get; set; }
-        public string Photo { get; set; }
+        public Blob Photo { get; set; }
         public int Invent_num { get; set; }
         public int Class_id { get; set; }
         public int Prem_user_id { get; set; }
@@ -25,7 +25,7 @@ namespace t_project.Models
             
         }
 
-        public Equipment(int Id, string Type_equip, string Photo, int Invent_num, int Class_id, int Prem_user_id, int t_Prem_user_id, int cost_eqip_id, int Status_id, int Model_id, string Comment)
+        public Equipment(int Id, string Type_equip, Blob Photo, int Invent_num, int Class_id, int Prem_user_id, int t_Prem_user_id, int cost_eqip_id, int Status_id, int Model_id, string Comment)
         {
             this.Id = Id;
             this.Type_equip = Type_equip;

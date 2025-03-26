@@ -117,8 +117,12 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
                     <Button Content="Оборудование" Click="Equipment_Click"/>
+                    <Button Content="Инветоризация" Click="Inventory_Click"/>
+                    <Button Content="Аудитории" Click="Audience_Click"/>
                 </StackPanel>
                 <Frame x:Name="equipment" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+                <Frame x:Name="inventory" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+                <Frame x:Name="audience" Grid.Column="1" NavigationUIVisibility="Hidden"/>
             </Grid>
         </Grid>
     </Border>

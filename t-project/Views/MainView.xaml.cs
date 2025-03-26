@@ -41,5 +41,15 @@ namespace t_project.Views
         {
             equipment.Content = new EquipmentPage();
         }
+
+        private void Inventory_Click(object sender, RoutedEventArgs e)
+        {
+            inventory.Content = new InventoryPage();
+        }
+
+        private void Audience_Click(object sender, RoutedEventArgs e)
+        {
+            audience.Content = new AudiencePage();
+        }
     }
 }
