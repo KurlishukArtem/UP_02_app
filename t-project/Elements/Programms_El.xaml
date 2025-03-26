@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="t_project.Elements.Programms_El"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:t_project.Elements"
+             mc:Ignorable="d" >
+    <Grid>
+        <Border
+        BorderBrush="DarkGray" 
+        BorderThickness="1" 
+        CornerRadius="10" 
+        Padding="10" Margin="30,10,30,0">
+            <Border.Background>
+                <SolidColorBrush Color="White"/>
+            </Border.Background>
+            <StackPanel>
+                <Label Content="Индекс: " x:Name="euip_id" FontWeight="Bold" Margin="0,0,0,5"/>
+                <Label Content="наименование: " Width="200" Margin="0,0,0,5" Name="tb_program_name"/>
+                <Label Content="программист ОС: " Width="200" Margin="0,0,0,5" Name="tb_os_programmer"/>
+                <Label Content="Версия: " Width="200" Name="tb_version_os"/>
+                
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>

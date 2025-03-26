@@ -51,5 +51,20 @@ namespace t_project.Views
         {
             audience.Content = new AudiencePage();
         }
+
+        private void Materials_Click(object sender, RoutedEventArgs e)
+        {
+            materials.Content = new MatrialsPage();
+        }
+
+        private void NetSettings_Click(object sender, RoutedEventArgs e)
+        {
+            netSettings.Content = new NetSettingsPage();    
+        }
+
+        private void Programms_Click(object sender, RoutedEventArgs e)
+        {
+            programms.Content = new ProgrammsPage();
+        }
     }
 }

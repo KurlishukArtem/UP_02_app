@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="t_project.Elements.NetSettings_El"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:t_project.Elements"
+             mc:Ignorable="d">
+    <Grid>
+        <Border
+            BorderBrush="DarkGray" 
+            BorderThickness="1" 
+            CornerRadius="10" 
+            Padding="10" Margin="30,10,30,0">   
+            <Border.Background>
+                <SolidColorBrush Color="White"/>
+            </Border.Background>
+            <StackPanel>
+                <Label Content="Индекс: " x:Name="euip_id" FontWeight="Bold" Margin="0,0,0,5"/>
+                <Label Content="ip адрес: " Width="200" Margin="0,0,0,5" Name="tb_ip_adress"/>
+                <Label Content="маска: " Width="200" Margin="0,0,0,5" Name="tb_mask"/>
+                <Label Content="стандартный порт: " Width="200" Name="tb_base_gate"/>
+                <Label Content="сервера DNS: " Width="200" Name="tb_dns_servers"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>
