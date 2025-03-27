@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using t_project.Models;
+using t_project.Views;
 
 namespace t_project.Elements
 {
@@ -36,5 +38,17 @@ namespace t_project.Elements
             this.tb_comment.Content += _equipment.Comment.ToString();
         }
 
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            MainView.main.frame.Navigate(new Views.Add.EquipmentAdd(_equipment));
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            DB.Context.EquipContext equipcontext = new DB.Context.EquipContext();
+            equipcontext.equipment.Remove(_equipment);
+            equipcontext.SaveChanges();
+            MainView.main.frame.Navigate(new Views.EquipmentPage());
+        }
     }
 }
