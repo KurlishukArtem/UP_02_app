@@ -1,0 +1,23 @@
+﻿<Page x:Class="t_project.Views.Add.InventoryAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:t_project.Views.Add"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="InventoryAdd">
+
+    <Grid Background="#EBFFF6">
+        <ScrollViewer>
+            <StackPanel x:Name="parent">
+                <TextBox x:Name="tb_date_start" VerticalAlignment="Center" Margin="20,100,20,0" Background="Gray"/>
+                <TextBox x:Name="tb_date_end" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>
+                <TextBox x:Name="tb_invent_name" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>
+                
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="Back" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Back_Click" Margin="10"/>
+        <Button x:Name="Add" Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Add_Click" Margin="10"/>
+    </Grid>
+</Page>

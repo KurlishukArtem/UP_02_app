@@ -20,6 +20,8 @@
                 <Label Content="Фото: " Width="200" Margin="0,0,0,5" Name="tb_sub_name"/>
                 <Label Content="номер: " Width="200" Name="tb_prem_user"/>
                 <Label Content="индекс класса: " Width="200" Name="tb_t_prem_user"/>
+                <Button x:Name="Edit" Content="Редактировать" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Edit_Click" Margin="10"/>
+                <Button x:Name="Delete" Content="Удалить" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Delete_Click" Margin="10"/>
             </StackPanel>
         </Border>
 

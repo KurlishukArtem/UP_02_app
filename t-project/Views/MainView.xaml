@@ -123,12 +123,8 @@
                     <Button Content="Настройки сети" Click="NetSettings_Click"/>
                     <Button Content="Программы" Click="Programms_Click"/>
                 </StackPanel>
-                <Frame x:Name="equipment" Grid.Column="1" NavigationUIVisibility="Hidden"/>
-                <Frame x:Name="inventory" Grid.Column="1" NavigationUIVisibility="Hidden"/>
-                <Frame x:Name="audience" Grid.Column="1" NavigationUIVisibility="Hidden"/>
-                <Frame x:Name="materials" Grid.Column="1" NavigationUIVisibility="Hidden"/>
-                <Frame x:Name="netSettings" Grid.Column="1" NavigationUIVisibility="Hidden"/>
-                <Frame x:Name="programms" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+                <Frame x:Name="frame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+                
             </Grid>
         </Grid>
     </Border>

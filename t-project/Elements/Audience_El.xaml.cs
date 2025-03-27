@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using t_project.Views;
 
 namespace t_project.Elements
 {
@@ -29,6 +30,19 @@ namespace t_project.Elements
             this.tb_prem_user.Content += _audience.prem_user.ToString();
             this.tb_t_prem_user.Content += _audience.t_prem_user.ToString();
         }
-        
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            MainView.main.frame.Navigate(new Views.Add.AudienceAdd(_audience));
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+            DB.Context.AudienceContext audienceContext = new DB.Context.AudienceContext();
+            audienceContext.audience.Remove(_audience);
+            audienceContext.SaveChanges();
+            MainView.main.frame.Navigate(new Views.AudiencePage());
+        }
     }
 }

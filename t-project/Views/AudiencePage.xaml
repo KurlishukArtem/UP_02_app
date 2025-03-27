@@ -11,8 +11,9 @@
     <Grid Background="#EBFFF6">
         <ScrollViewer>
             <StackPanel x:Name="parent">
-
+                
             </StackPanel>
         </ScrollViewer>
+        <Button x:Name="Add" Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Add_Click" Margin="10"/>
     </Grid>
 </Page>

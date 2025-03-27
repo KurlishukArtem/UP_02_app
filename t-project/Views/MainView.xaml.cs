@@ -8,9 +8,11 @@ namespace t_project.Views
     /// </summary>
     public partial class MainView : Window
     {
+        public static MainView main;
         public MainView()
         {
             InitializeComponent();
+            main = this;
         }
         #region Оформление.
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -39,32 +41,32 @@ namespace t_project.Views
 
         private void Equipment_Click(object sender, RoutedEventArgs e)
         {
-            equipment.Content = new EquipmentPage();
+            frame.Content = new EquipmentPage();
         }
 
         private void Inventory_Click(object sender, RoutedEventArgs e)
         {
-            inventory.Content = new InventoryPage();
+            frame.Content = new InventoryPage();
         }
 
         private void Audience_Click(object sender, RoutedEventArgs e)
         {
-            audience.Content = new AudiencePage();
+            frame.Content = new AudiencePage();
         }
 
         private void Materials_Click(object sender, RoutedEventArgs e)
         {
-            materials.Content = new MatrialsPage();
+            frame.Content = new MatrialsPage();
         }
 
         private void NetSettings_Click(object sender, RoutedEventArgs e)
         {
-            netSettings.Content = new NetSettingsPage();    
+            frame.Content = new NetSettingsPage();    
         }
 
         private void Programms_Click(object sender, RoutedEventArgs e)
         {
-            programms.Content = new ProgrammsPage();
+            frame.Content = new ProgrammsPage();
         }
     }
 }
