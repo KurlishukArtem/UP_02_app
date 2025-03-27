@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using t_project.Views;
 
 namespace t_project.Elements
 {
@@ -26,6 +27,19 @@ namespace t_project.Elements
             this.tb_date_end.Content += _inventory.date_end.ToString();
             this.tb_invent_name.Content += _inventory.invent_name.ToString();
 
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            MainView.main.frame.Navigate(new Views.Add.InventoryAdd(_inventory));
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            DB.Context.InventContext inventContext = new DB.Context.InventContext();
+            inventContext.inventory.Remove(_inventory);
+            inventContext.SaveChanges();
+            MainView.main.frame.Navigate(new Views.InventoryPage());
         }
     }
 }

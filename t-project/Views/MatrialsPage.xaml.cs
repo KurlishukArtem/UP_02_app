@@ -33,5 +33,10 @@ namespace t_project.Views
                 parent.Children.Add(new Elements.Materials_El(_equip));
             }
         }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
