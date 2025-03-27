@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace t_project.Views.Add
 {
@@ -23,18 +15,18 @@ namespace t_project.Views.Add
         {
             InitializeComponent();
             _equipmentAdd = equipmentAdd;
-            if (equipmentAdd != null )
+            if (equipmentAdd != null)
             {
                 Add.Content = "Изменить";
                 tb_type_equip.Text = equipmentAdd.Type_equip;
-                tb_photo.Text = equipmentAdd.Photo;
+                tb_photo.Text = Convert.ToBase64String(equipmentAdd.Photo);
                 tb_invent_num.Text = equipmentAdd.Invent_num.ToString();
                 tb_class_id.Text = equipmentAdd.Class_id.ToString();
                 tb_prem_user_id.Text = equipmentAdd.Prem_user_id.ToString();
                 tb_t_prem_user_id.Text = equipmentAdd.t_Prem_user_id.ToString();
                 tb_cost_eqip_id.Text = equipmentAdd.t_Prem_user_id.ToString();
                 tb_status_id.Text = equipmentAdd.Status_id.ToString();
-                tb_model_id.Text = equipmentAdd.Status_id.ToString() ;
+                tb_model_id.Text = equipmentAdd.Status_id.ToString();
                 tb_comment.Text = equipmentAdd.Comment;
             }
         }
@@ -52,11 +44,11 @@ namespace t_project.Views.Add
             {
                 Models.Equipment equipment = new Models.Equipment();
                 equipment.Type_equip = tb_type_equip.Text;
-                equipment.Photo = tb_photo.Text;
+                equipment.Photo = File.ReadAllBytes(tb_photo.Text);
                 equipment.Invent_num = int.Parse(tb_invent_num.Text);
                 equipment.Class_id = int.Parse(tb_class_id.Text);
                 equipment.Prem_user_id = int.Parse(tb_prem_user_id.Text);
-                equipment.t_Prem_user_id = int.Parse(tb_t_prem_user_id.Text) ;
+                equipment.t_Prem_user_id = int.Parse(tb_t_prem_user_id.Text);
                 equipment.cost_eqip_id = int.Parse(tb_cost_eqip_id.Text);
                 equipment.Status_id = int.Parse(tb_status_id.Text);
                 equipment.Model_id = int.Parse(tb_model_id.Text);
@@ -67,7 +59,7 @@ namespace t_project.Views.Add
             {
 
                 _equipmentAdd.Type_equip = tb_type_equip.Text;
-                _equipmentAdd.Photo = tb_photo.Text;
+                _equipmentAdd.Photo = File.ReadAllBytes(tb_photo.Text);
                 _equipmentAdd.Invent_num = int.Parse(tb_invent_num.Text);
                 _equipmentAdd.Class_id = int.Parse(tb_class_id.Text);
                 _equipmentAdd.Prem_user_id = int.Parse(tb_prem_user_id.Text);
