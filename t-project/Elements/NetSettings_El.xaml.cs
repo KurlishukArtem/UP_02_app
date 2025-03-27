@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using t_project.Models;
+using t_project.Views;
 
 namespace t_project.Elements
 {
@@ -28,6 +30,19 @@ namespace t_project.Elements
             this.tb_mask.Content += _netSettings.mask.ToString();
             this.tb_base_gate.Content += _netSettings.base_gate.ToString();
             this.tb_dns_servers.Content += _netSettings.dns_servers.ToString();
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            MainView.main.frame.Navigate(new Views.Add.NetSettingsAdd(_netSettings));
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            DB.Context.NetSettingsContext netSettingsContext = new DB.Context.NetSettingsContext();
+            netSettingsContext.net_settings.Remove(_netSettings);
+            netSettingsContext.SaveChanges();
+            MainView.main.frame.Navigate(new Views.NetSettingsPage());
         }
     }
 }

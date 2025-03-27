@@ -21,7 +21,8 @@
                 <Label Content="Дата завоза: " Width="200" Name="tb_come_date"/>
                 <Label Content="Изображение: " Width="200" Name="tb_picture"/>
                 <Label Content="номер материала: " Width="200" Name="tb_material_number"/>
-                
+                <Button x:Name="Edit" Content="Редактировать" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Edit_Click" Margin="10"/>
+                <Button x:Name="Delete" Content="Удалить" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Delete_Click" Margin="10"/>
             </StackPanel>
         </Border>
 

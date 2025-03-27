@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using t_project.Models;
+using t_project.Views;
 
 namespace t_project.Elements
 {
@@ -29,6 +31,19 @@ namespace t_project.Elements
             this.tb_come_date.Content += _materials.come_date.ToString();
             this.tb_picture.Content += _materials.picture.ToString();
             this.tb_material_number.Content += _materials.material_number.ToString();
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            MainView.main.frame.Navigate(new Views.Add.MaterialsAdd(_materials));
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            DB.Context.MaterialContext materialsContext = new DB.Context.MaterialContext();
+            materialsContext.materials.Remove(_materials);
+            materialsContext.SaveChanges();
+            MainView.main.frame.Navigate(new Views.EquipmentPage());
         }
     }
 }
