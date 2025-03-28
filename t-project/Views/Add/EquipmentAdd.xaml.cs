@@ -85,7 +85,7 @@ namespace t_project.Views.Add
             {
                 try
                 {
-                    _equipmentAdd = new Models.Equipment();
+                    
                     using (var fileStream = File.OpenRead(ofd.FileName))
                     {
                         MemoryStream memoryStream = new MemoryStream();
