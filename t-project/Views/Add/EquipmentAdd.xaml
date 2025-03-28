@@ -12,7 +12,7 @@
         <ScrollViewer>
             <StackPanel x:Name="parent">
                 <TextBox x:Name="tb_type_equip" VerticalAlignment="Center" Margin="20,100,20,0" Background="Gray"/>
-                <TextBox x:Name="tb_photo" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>
+                <Button x:Name="tb_photo" VerticalAlignment="Center" Margin="20,10,20,0" Height="20" Width="50" Content="Обзор..." Click="tb_photo_Click"/>
                 <TextBox x:Name="tb_invent_num" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>
                 <TextBox x:Name="tb_class_id" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>
                 <TextBox x:Name="tb_prem_user_id" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>

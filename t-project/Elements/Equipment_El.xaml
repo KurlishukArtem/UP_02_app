@@ -16,16 +16,16 @@
             </Border.Background>
             <StackPanel>
                 <Label Content="Индекс: " x:Name="euip_id" FontWeight="Bold" Margin="0,0,0,5"/>
-                <Label Content="Тип оборудования: " Width="200" Margin="0,0,0,5" Name="tb_type"/>
-                <Label Content="Фото: " Width="200" Margin="0,0,0,5" Name="tb_photo"/>
-                <Label Content="номер: " Width="200" Name="tb_invent"/>
-                <Label Content="индекс класса: " Width="200" Name="tb_class_id"/>
-                <Label Content="главный пользователь: " Width="200" Name="tb_user"/>
-                <Label Content="временный пользователь: " Width="200" Name="tb_t_user"/>
-                <Label Content="цена вопроса: " Width="200" Name="tb_cost"/>
-                <Label Content="статус: " Width="200" Name="tb_status"/>
-                <Label Content="модель: " Width="200" Name="tb_model"/>
-                <Label Content="комментарий: " Width="200" Name="tb_comment"/>
+                <Image Width="70" Height="70" Margin="0,0,0,5" x:Name="tb_photo" Source="\Images\Logo.png"/>
+                <Label Content="Тип оборудования: " Width="200" Margin="0,0,0,5" x:Name="tb_type"/>
+                <Label Content="номер: " Width="200" x:Name="tb_invent"/>
+                <Label Content="индекс класса: " Width="200" x:Name="tb_class_id"/>
+                <Label Content="главный пользователь: " Width="200" x:Name="tb_user"/>
+                <Label Content="временный пользователь: " Width="200" x:Name="tb_t_user"/>
+                <Label Content="цена вопроса: " Width="200" x:Name="tb_cost"/>
+                <Label Content="статус: " Width="200" x:Name="tb_status"/>
+                <Label Content="модель: " Width="200" x:Name="tb_model"/>
+                <Label Content="комментарий: " Width="200" x:Name="tb_comment"/>
                 <Button x:Name="Edit" Content="Редактировать" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Edit_Click" Margin="10"/>
                 <Button x:Name="Delete" Content="Удалить" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Delete_Click" Margin="10"/>
             </StackPanel>
