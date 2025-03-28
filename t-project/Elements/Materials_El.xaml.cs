@@ -29,7 +29,7 @@ namespace t_project.Elements
             this.tb_material_name.Content += _materials.material_name.ToString();
             this.tb_description.Content += _materials.description.ToString();
             this.tb_come_date.Content += _materials.come_date.ToString();
-            this.tb_picture.Content += _materials.picture.ToString();
+            
             this.tb_material_number.Content += _materials.material_number.ToString();
         }
 

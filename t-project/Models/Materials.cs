@@ -11,7 +11,6 @@ namespace t_project.Models
         public string material_name { get; set; }
         public string description { get; set; }
         public DateTime come_date { get; set; }
-        public Blob picture { get; set; }
         public int material_number { get; set; }
 
     }

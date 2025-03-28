@@ -36,7 +36,7 @@ namespace t_project.Views
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-
+            MainView.main.frame.Navigate(new Add.MaterialsAdd());
         }
     }
 }

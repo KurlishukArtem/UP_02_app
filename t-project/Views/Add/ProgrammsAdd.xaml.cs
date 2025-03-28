@@ -20,7 +20,7 @@ namespace t_project.Views.Add
     public partial class ProgrammsAdd : Page
     {
         Models.Programms _programms;
-        public ProgrammsAdd(Models.Programms programms)
+        public ProgrammsAdd(Models.Programms programms = null)
         {
             InitializeComponent();
             _programms = programms;

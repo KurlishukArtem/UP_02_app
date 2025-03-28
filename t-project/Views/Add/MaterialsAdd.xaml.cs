@@ -10,7 +10,7 @@ namespace t_project.Views.Add
     public partial class MaterialsAdd : Page
     {
         Models.Materials _materialsAdd;
-        public MaterialsAdd(Models.Materials materialsAdd)
+        public MaterialsAdd(Models.Materials materialsAdd = null)
         {
             InitializeComponent();
             _materialsAdd = materialsAdd;
@@ -20,7 +20,7 @@ namespace t_project.Views.Add
                 tb_material_name.Text = materialsAdd.material_name;
                 tb_description.Text = materialsAdd.description;
                 tb_come_date.Text = materialsAdd.come_date.ToString();
-                tb_picture.Text = materialsAdd.picture.ToString();
+                
                 tb_material_number.Text = materialsAdd.material_number.ToString();
             }
             else { Add.Content = "Добавить"; }
@@ -35,7 +35,7 @@ namespace t_project.Views.Add
         {
             DB.Context.MaterialContext _materials = new DB.Context.MaterialContext();
 
-            if (_materialsAdd != null)
+            if (_materialsAdd == null)
             {
                 Models.Materials materials = new Models.Materials();
                 materials.material_name = tb_material_name.Text;
@@ -51,7 +51,7 @@ namespace t_project.Views.Add
                 _materialsAdd.description = tb_description.Text;
                 _materialsAdd.come_date = DateTime.Parse(tb_come_date.Text);
                 _materialsAdd.material_number = int.Parse(tb_material_number.Text);
-                _materials.materials.Add(_materialsAdd);
+                _materials.materials.Update(_materialsAdd);
             }
             _materials.SaveChanges();
             MainView.main.frame.Navigate(new Views.MatrialsPage());

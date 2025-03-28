@@ -20,7 +20,7 @@ namespace t_project.Views.Add
     public partial class NetSettingsAdd : Page
     {
         Models.NetSettings _netSettings;
-        public NetSettingsAdd(Models.NetSettings netSettings)
+        public NetSettingsAdd(Models.NetSettings netSettings = null)
         {
             InitializeComponent();
             _netSettings = netSettings;

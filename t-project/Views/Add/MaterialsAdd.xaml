@@ -14,7 +14,7 @@
                 <TextBox x:Name="tb_material_name" VerticalAlignment="Center" Margin="20,100,20,0" Background="Gray"/>
                 <TextBox x:Name="tb_description" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>
                 <TextBox x:Name="tb_come_date" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>
-                <TextBox x:Name="tb_picture" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>
+                
                 <TextBox x:Name="tb_material_number" VerticalAlignment="Center" Margin="20,10,20,0" Background="Gray"/>
             </StackPanel>
         </ScrollViewer>
